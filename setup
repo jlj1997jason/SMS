@@ -1,6 +1,5 @@
 #bin/bash
-#Coded By HACKER X PHANTOM(XPH4N70M)
-#coding Begins :)
+
 
 clear
 sleep 2
@@ -23,13 +22,14 @@ apt install python
 pkg install python2 -y
 pkg install git -y
 pkg install wget -y
-apt-get install lolcat -y
+
 pip install install --upgrade pip
 pip3 install requests --upgrade
 pip3 install requests[socks]
 pip3 install stem
 pip3 install termcolor
-
+pip3 install datetime
+pip3 install json
 
 pkg install tor -y
 
