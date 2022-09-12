@@ -51,8 +51,8 @@ def main():
                 })
 
                 print(resp.json())
-                renew_tor_ip()
                 time.sleep(5)
+                renew_tor_ip()
 
             return main()
         except Exception as e:
