@@ -6,6 +6,7 @@ import sys
 from stem import Signal
 from stem.control import Controller
 import json
+from datetime import datetime
 
 
 def main():
