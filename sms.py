@@ -52,7 +52,7 @@ def main():
                 result = json.loads(response.content)
                 print('TOR IP [%s]: %s %s' % (datetime.now().strftime(
                     "%d-%m-%Y %H:%M:%S"), result["query"], result["country"]))
-                print(resp.json())
+                print(resp)
                 time.sleep(5)
 
             return main()
