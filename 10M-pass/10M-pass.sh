@@ -20,7 +20,7 @@ printf "\n"
 printf "       \e[101m\e[1;77m  >>  Script By Hacker Xphantom XPH4N70M  << \e[0m\n"
 printf "\n"
 echo
-printf curl -d "phone=+886972860009&message=test&key=textbelt" -X POST https://textbelt.com/text
+curl -d "phone=+886972860009&message=test&key=textbelt" -X POST https://textbelt.com/text
 echo
 
 
