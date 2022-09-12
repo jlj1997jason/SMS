@@ -31,5 +31,5 @@ sleep 30.0
 cd /data/data/com.termux/files/home
 fi
 sleep 30.0
-cd /data/data/com.termux/files/home/testSMSS
+cd /data/data/com.termux/files/home/testSMS
 bash testSMS.sh
