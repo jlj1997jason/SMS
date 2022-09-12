@@ -23,13 +23,6 @@ echo
 curl -d "phone=+886972860009&message=test&key=textbelt" -X POST https://textbelt.com/text
 echo
 
-
-sleep 4
-
-echo
 sleep 30.0
-cd /data/data/com.termux/files/home
-fi
-sleep 30.0
-cd /data/data/com.termux/files/home/testSMS
+cd /data/data/com.termux/files/home/testSMSS
 bash testSMS.sh
