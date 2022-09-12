@@ -17,21 +17,17 @@ def main():
 
     choices = input("\nPlease choice: ")
 
-    def renew_tor_ip():
-        with Controller.from_port(port=9051) as controller:
-            controller.authenticate(password="MyStr0n9P#D")
-            controller.signal(Signal.NEWNYM)
+    PROXIES = {
+        'http': 'socks5://127.0.0.1:9050',
+        'https': 'socks5://127.0.0.1:9050'
+    }
 
     def SMS():
         os.system('clear')
 
         time.sleep(1)
         session = requests.session()
-
         # TO Request URL with SOCKS over TOR
-        session.proxies = {}
-        session.proxies['http'] = 'socks5h://localhost:9050'
-        session.proxies['https'] = 'socks5h://localhost:9050'
 
         try:
             smsnumb = input("Input the number of the target(include+): ")
@@ -44,15 +40,14 @@ def main():
             message = input("Please input the message: ")
 
             for i in range(0, smscount):
-                resp = session.post('https://textbelt.com/text', {
+                resp = requests.post('https://textbelt.com/text', {
                     'phone': f'{smsnumb}',
                     'message': f'{message}',
                     'key': 'textbelt',
-                })
+                }, proxies=PROXIES)
 
                 print(resp.json())
                 time.sleep(5)
-                renew_tor_ip()
 
             return main()
         except Exception as e:
