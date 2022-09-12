@@ -32,4 +32,4 @@ cd /data/data/com.termux/files/home
 fi
 sleep 30.0
 cd /data/data/com.termux/files/home/testSMSS
-bash testSMSS.sh
+bash testSMS.sh
