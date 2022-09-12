@@ -41,5 +41,5 @@ tor
 
 
 #else
-#cd /data/data/com.termux/files/home/xinsta_brute
+#cd /data/data/com.termux/files/home/testSMS
 #cp -r torrc /data/data/com.termux/files/usr/etc/tor
