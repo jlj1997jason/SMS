@@ -29,7 +29,6 @@ pip3 install requests[socks]
 pip3 install stem
 pip3 install termcolor
 pip3 install datetime
-pip3 install json
 
 pkg install tor -y
 
