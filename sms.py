@@ -5,6 +5,7 @@ import requests
 import sys
 from stem import Signal
 from stem.control import Controller
+import json
 
 
 def main():
@@ -45,7 +46,11 @@ def main():
                     'message': f'{message}',
                     'key': 'textbelt',
                 }, proxies=PROXIES)
-
+                response = requests.get(
+                    "http://ip-api.com/json/", proxies=PROXIES)
+                result = json.loads(response.content)
+                print('TOR IP [%s]: %s %s' % (datetime.now().strftime(
+                    "%d-%m-%Y %H:%M:%S"), result["query"], result["country"]))
                 print(resp.json())
                 time.sleep(5)
 
