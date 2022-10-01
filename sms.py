@@ -6,6 +6,10 @@ import sys
 
 
 def main():
+    proxies = {'http': 'socks5://127.0.0.1:9050',
+               'https': 'socks5://127.0.0.1:9050'
+               }
+
     def logo():
         print(colored(
             """
@@ -42,7 +46,7 @@ def main():
     time.sleep(1)
 
     print('1: Send sms')
-    print('2: Help!')
+    print('-1: Exit!')
 
     choices = input("\nPlease choice: ")
 
@@ -58,7 +62,7 @@ def main():
             'phone': f'{smsnumb}',
             'message': f'{message}',
             'key': 'textbelt',
-        })
+        }, proxies=proxies)
 
         print(resp.json())
         time.sleep(3)
@@ -91,8 +95,6 @@ def main():
 
     elif choices == "-1":
         os.system("clear")
-        time.sleep(1)
-        logo()
         time.sleep(1)
         return
 
